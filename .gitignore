@@ -1,4 +1,5 @@
 
+/.docker/nginx/log/*
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
