@@ -11,9 +11,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainController extends AbstractController
 {
     /**
-     * @Route("/mian", name="main")
+     * @Route("/main", name="main")
      */
-    public function index()
+    public function index(): Response
     {
         return $this->render('main.html.twig', []);
     }

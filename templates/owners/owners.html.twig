@@ -16,11 +16,13 @@
             <tbody>
             {% for owner in owners %}
             <tr>
-                <td>{{ owner.firstName }} {{ owner.lastName }}</td>
+                <td><a href="{{ path('owners_profile', {'id': owner.id}) }}">{{ owner.firstName }} {{ owner.lastName }}</a></td>
                 <td>{{ owner.address }}</td>
-                <td>Moscow</td>
+                <td>{{ owner.city }}</td>
                 <td>{{ owner.phone }}</td>
                 <td>some pets</td>
+                <td><a href="{{ path('owners_delete', {'id': owner.id}) }}" class="btn-sm"
+                       onclick="return confirm('Вый действительно хотите удалить пользователя?')">Delete</a></td>
             </tr>
             {% endfor %}
             </tbody>

@@ -43,17 +43,24 @@ class Owner
      */
     private $phone;
 
+    /**
+     * @ORM\Column(type="string", length=255, options={"default":"null"})
+     */
+    private $city;
+
     public function __construct(
         string $id,
         string $firstName,
         string $lastName,
         string $address,
+        string $city,
         string $phone
     ) {
         $this->id = $id;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->address = $address;
+        $this->city = $city;
         $this->phone = $phone;
         $this->pets = new ArrayCollection();
     }
@@ -62,6 +69,7 @@ class Owner
         string $firstName,
         string $lastName,
         string $address,
+        string $city,
         string $phone
     ): self
     {
@@ -70,11 +78,12 @@ class Owner
             $firstName,
             $lastName,
             $address,
+            $city,
             $phone
         );
     }
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }
@@ -139,5 +148,17 @@ class Owner
     public function setPhone(string $phone)
     {
         $this->phone = $phone;
+    }
+
+    public function getCity(): ?string
+    {
+        return $this->city;
+    }
+
+    public function setCity(string $city): self
+    {
+        $this->city = $city;
+
+        return $this;
     }
 }

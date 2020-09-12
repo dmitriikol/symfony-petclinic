@@ -10,17 +10,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0bc2b71-fe20-4176-9707-f54d267e5b98" name="Default Changelist" comment="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore">
+    <list default="true" id="a0bc2b71-fe20-4176-9707-f54d267e5b98" name="Default Changelist" comment="feat:&#10;* owner controller&#10;* стандартный дизайн&#10;* небольшое изменение структуры бд">
       <change beforePath="$PROJECT_DIR$/.docker/nginx/log/nginx-access.log" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/nginx/log/nginx-access.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Petclinic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Petclinic.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OwnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OwnerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Owner.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Owner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/OwnerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/OwnerRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/owners/owners.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/owners/owners.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +145,8 @@
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gvXvau3AzgqiJB8NdRqRSqnkcd" />
@@ -175,7 +181,7 @@
       <workItem from="1598996272253" duration="628000" />
       <workItem from="1599030278601" duration="127000" />
       <workItem from="1599921828461" duration="17613000" />
-      <workItem from="1599946170801" duration="1856000" />
+      <workItem from="1599946170801" duration="4228000" />
     </task>
     <task id="LOCAL-00001" summary="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore">
       <created>1599937666064</created>
@@ -184,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599937666064</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat:&#10;* owner controller&#10;* стандартный дизайн&#10;* небольшое изменение структуры бд">
+      <created>1599948359255</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599948359255</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,9 +217,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore" />
+    <MESSAGE value="feat:&#10;* owner controller&#10;* стандартный дизайн&#10;* небольшое изменение структуры бд" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:&#10;* owner controller&#10;* стандартный дизайн&#10;* небольшое изменение структуры бд" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599950151782">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1599950151782" />
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1599936402451">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -227,9 +245,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="347" y="73" width="598" height="534" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1599948029031" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1599942305670">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1599949785190">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1599942305670" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1599949785190" />
   </component>
 </project>

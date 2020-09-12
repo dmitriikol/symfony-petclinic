@@ -39,6 +39,21 @@ class OwnerController extends AbstractController
     }
 
     /**
+     * @Route("/profile/{id}", name="owners_profile")
+     * @param string $id
+     *
+     * @return Response
+     */
+    public function profileOwner(string $id): Response
+    {
+        $owner = $this->ownerRepository->get($id);
+
+        return $this->render('owners/profile.html.twig', [
+            'owner' => $owner
+        ]);
+    }
+
+    /**
      * @Route("/add-owner", name="owners_add_owner")
      * @param Request $request
      *
@@ -53,16 +68,33 @@ class OwnerController extends AbstractController
                 $settings['first-name'],
                 $settings['last-name'],
                 $settings['address'],
+                $settings['city'],
                 $settings['phone']
             );
 
             $this->ownerRepository->update($owner);
 
-            $this->addFlash('success',"Owner add");
+            $this->addFlash('success',"Owner add successfully.");
 
             return $this->redirectToRoute('owners_list');
         }
 
         return $this->render('owners/add-owner.html.twig', []);
+    }
+
+    /**
+     * @Route("/delete/{id}", name="owners_delete")
+     * @param string $id
+     *
+     * @return Response
+     */
+    public function deleteOwner(string $id): Response
+    {
+        $owner = $this->ownerRepository->find($id);
+        $this->ownerRepository->remove($owner);
+
+        $this->addFlash('success', 'Owner delete successfully.');
+
+        return $this->redirectToRoute('owners_list');
     }
 }

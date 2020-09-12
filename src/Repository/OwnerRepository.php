@@ -19,6 +19,16 @@ class OwnerRepository extends ServiceEntityRepository
         parent::__construct($registry, Owner::class);
     }
 
+    public function get(string $id): Owner
+    {
+        $owner = $this->find($id);
+        if (!$owner) {
+            throw new \Exception(
+                sprintf('Owner with id: "%s" not found.', $id)
+            );
+        }
+    }
+
     public function persist(Owner $owner): void
     {
         $this->_em->persist($owner);
@@ -32,6 +42,12 @@ class OwnerRepository extends ServiceEntityRepository
     public function update(Owner $owner): void
     {
         $this->persist($owner);
+        $this->flush();
+    }
+
+    public function remove(Owner $owner): void
+    {
+        $this->_em->remove($owner);
         $this->flush();
     }
 
