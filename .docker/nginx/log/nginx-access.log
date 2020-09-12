@@ -1,0 +1,5 @@
+172.20.0.1 - - [12/Sep/2020:16:53:28 +0000] "GET / HTTP/1.1" 404 82512 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
+172.20.0.1 - - [12/Sep/2020:16:53:31 +0000] "GET /favicon.ico HTTP/1.1" 404 250771 "http://localhost:45080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
+172.20.0.1 - - [12/Sep/2020:16:53:33 +0000] "GET /_wdt/f39e56 HTTP/1.1" 200 16769 "http://localhost:45080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
+172.20.0.1 - - [12/Sep/2020:16:53:33 +0000] "GET /index HTTP/1.1" 200 50667 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
+172.20.0.1 - - [12/Sep/2020:16:53:35 +0000] "GET /_wdt/2e5d24 HTTP/1.1" 200 17548 "http://localhost:45080/index" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
