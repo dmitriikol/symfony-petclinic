@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <a href="{{ path('owners_add_owner') }}" class="btn btn-primary m-3">Add Owner</a>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Pets</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for owner in owners %}
+            <tr>
+                <td>{{ owner.firstName }} {{ owner.lastName }}</td>
+                <td>{{ owner.address }}</td>
+                <td>Moscow</td>
+                <td>{{ owner.phone }}</td>
+                <td>some pets</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

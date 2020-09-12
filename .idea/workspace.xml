@@ -10,12 +10,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0bc2b71-fe20-4176-9707-f54d267e5b98" name="Default Changelist" comment="">
+    <list default="true" id="a0bc2b71-fe20-4176-9707-f54d267e5b98" name="Default Changelist" comment="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore">
       <change beforePath="$PROJECT_DIR$/.docker/nginx/log/nginx-access.log" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/nginx/log/nginx-access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/php/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Petclinic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Petclinic.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +138,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
       <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gvXvau3AzgqiJB8NdRqRSqnkcd" />
@@ -143,11 +151,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../work/push-system" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../work/quiz-content" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\Petclinic\templates\owners" />
+      <recent name="C:\projects\Petclinic\public\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\Petclinic\templates\owners" />
       <recent name="C:\projects\Petclinic\templates" />
     </key>
   </component>
@@ -161,8 +174,17 @@
       <updated>1598996270962</updated>
       <workItem from="1598996272253" duration="628000" />
       <workItem from="1599030278601" duration="127000" />
-      <workItem from="1599921828461" duration="10505000" />
+      <workItem from="1599921828461" duration="17613000" />
+      <workItem from="1599946170801" duration="1856000" />
     </task>
+    <task id="LOCAL-00001" summary="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore">
+      <created>1599937666064</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599937666064</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,19 +200,36 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1599936402451">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1599936402451" />
-    <state x="421" y="98" key="FileChooserDialogImpl" timestamp="1599936297296">
+    <state x="421" y="98" key="FileChooserDialogImpl" timestamp="1599947548231">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1599936297296" />
-    <state x="446" y="64" key="NewPhpClassDialog" timestamp="1599921866883">
+    <state x="421" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1599947548231" />
+    <state x="446" y="64" key="NewPhpClassDialog" timestamp="1599942000452">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1599921866883" />
+    <state x="446" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1599942000452" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1599937677086">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1599937677086" />
+    <state x="347" y="73" width="598" height="534" key="find.popup" timestamp="1599948029031">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="347" y="73" width="598" height="534" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1599948029031" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1599942305670">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1599942305670" />
   </component>
 </project>
