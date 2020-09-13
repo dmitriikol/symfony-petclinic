@@ -33,22 +33,22 @@ class Pet
      * @ORM\Id()
      * @ORM\Column(type="string")
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private string $name;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $birthDate;
+    private \DateTimeInterface $birthDate;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $type;
+    private string $type;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Owner", mappedBy="pets", cascade={"persist", "detach", "merge", "refresh"}, fetch="EXTRA_LAZY")
@@ -83,7 +83,7 @@ class Pet
         );
     }
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }
@@ -93,17 +93,17 @@ class Pet
         return $this->name;
     }
 
-    public function setName(string $name)
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    public function getBirthDate(): ?\DateTimeInterface
+    public function getBirthDate(): \DateTimeInterface
     {
         return $this->birthDate;
     }
 
-    public function setBirthDate(\DateTimeInterface $birthDate)
+    public function setBirthDate(\DateTimeInterface $birthDate): void
     {
         $this->birthDate = $birthDate;
     }
@@ -113,7 +113,7 @@ class Pet
         return $this->type;
     }
 
-    public function setType(string $type)
+    public function setType(string $type): void
     {
         $this->type = $type;
     }
@@ -126,7 +126,7 @@ class Pet
         return $this->toArrayProperty($this->owners);
     }
 
-    public function addOwner(Owner $owner)
+    public function addOwner(Owner $owner): void
     {
         if (!$this->owners->contains($owner)) {
             $this->owners[] = $owner;
@@ -134,7 +134,7 @@ class Pet
         }
     }
 
-    public function removeOwner(Owner $owner)
+    public function removeOwner(Owner $owner): void
     {
         if ($this->owners->contains($owner)) {
             $this->owners->removeElement($owner);

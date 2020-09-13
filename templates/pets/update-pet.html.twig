@@ -7,11 +7,11 @@
         <form method="post">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="settings[name]">
+                <input type="text" class="form-control" value="{{ pet.name }}" id="name" name="settings[name]">
             </div>
             <div class="form-group">
-                <label for="date">Birth Date</label>
-                <input type="date" class="form-control" id="date"  name="settings[birthDate]">
+                <label for="address">Birth Date</label>
+                <input type="date" class="form-control" id="address" value="{{ pet.birthDate|date("m:d:Y") }}" name="settings[birthDate]">
             </div>
             <div class="form-group">
                 <label for="type">Type</label>
@@ -22,7 +22,7 @@
                 </select>
             </div>
             <input type="hidden" name="submit" value="1">
-            <button type="submit" class="btn btn-primary">Add Pet</button>
+            <button type="submit" class="btn btn-primary">Update Pet</button>
         </form>
     </div>
 {% endblock %}

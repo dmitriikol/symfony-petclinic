@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\OwnerRepository;
+use App\Repository\VisitRepository;
 
 /**
  * @Route("/owners")
@@ -17,10 +18,12 @@ class OwnerController extends AbstractController
 {
 
     private OwnerRepository $ownerRepository;
+    private VisitRepository $visitRepository;
 
-    public function __construct(OwnerRepository $ownerRepository)
+    public function __construct(OwnerRepository $ownerRepository, VisitRepository $visitRepository)
     {
         $this->ownerRepository = $ownerRepository;
+        $this->visitRepository = $visitRepository;
     }
 
     /**
@@ -49,7 +52,8 @@ class OwnerController extends AbstractController
         $owner = $this->ownerRepository->get($id);
 
         return $this->render('owners/profile.html.twig', [
-            'owner' => $owner
+            'owner'  => $owner,
+            'visits' => $this->visitRepository->findAll()
         ]);
     }
 

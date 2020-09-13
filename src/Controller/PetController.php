@@ -36,12 +36,11 @@ class PetController extends AbstractController
      */
     public function addPet(Request $request, string $ownerId): Response
     {
-
         $owner = $this->ownerRepository->get($ownerId);
 
         if ($request->get('submit') == 1) {
             $settings = $request->get('settings');
-            //dd(\DateTime::createFromFormat('Y-d-m', $settings['birthDate']));
+
             $pet = Pet::buildPet(
                 $settings['name'],
                 \DateTime::createFromFormat('Y-d-m', $settings['birthDate']),
@@ -62,6 +61,43 @@ class PetController extends AbstractController
             'pets/add-pet.html.twig',
             [
                 'owner' => $owner
+            ]
+        );
+    }
+
+    /**
+     * @Route("/update-pet/{ownerId}/{petId}", name="pet_update")
+     * @param Request $request
+     * @param string $ownerId
+     * @param string $petId
+     *
+     * @return Response
+     * @throws \Exception
+     */
+    public function updatePet(Request $request, string $ownerId, string $petId): Response
+    {
+        $owner = $this->ownerRepository->get($ownerId);
+        $pet = $this->petRepository->get($petId);
+
+        if ($request->get('submit') == 1) {
+            $settings = $request->get('settings');
+
+            $pet->setName($settings['name']);
+            $pet->setBirthDate(\DateTime::createFromFormat('Y-d-m', $settings['birthDate']));
+            $pet->setType($settings['type']);
+
+            $this->petRepository->update($pet);
+
+            return $this->redirectToRoute('owners_profile', [
+                'id' => $ownerId
+            ]);
+        }
+
+        return $this->render(
+            'pets/update-pet.html.twig',
+            [
+                'owner' => $owner,
+                'pet'   => $pet
             ]
         );
     }

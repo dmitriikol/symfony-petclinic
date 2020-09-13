@@ -19,6 +19,22 @@ class VisitRepository extends ServiceEntityRepository
         parent::__construct($registry, Visit::class);
     }
 
+    public function persist(Visit $visit): void
+    {
+        $this->_em->persist($visit);
+    }
+
+    public function flush(): void
+    {
+        $this->_em->flush();
+    }
+
+    public function update(Visit $visit): void
+    {
+        $this->persist($visit);
+        $this->flush();
+    }
+
     // /**
     //  * @return Visit[] Returns an array of Visit objects
     //  */

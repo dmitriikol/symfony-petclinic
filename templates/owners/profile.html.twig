@@ -45,7 +45,28 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-6">gg</div>
+            <div class="col-6">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Visit Date</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for visit in visits %}
+                    <tr>
+                        {% if visit.pet == pet.id %}
+                        <th>{{ visit.visitDate|date("m/d/Y") }}</th>
+                        <td>{{ visit.description|slice(0,30) }}...</td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                    <a href="{{ path('pet_update', {'ownerId': owner.id, 'petId': pet.id}) }}" class="btn-link btn">Edit Pet</a>
+                    <a href="{{ path('visit_add', {'petId': pet.id}) }}" class="btn-link btn">Add Visit</a>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <hr>
         {% endfor %}

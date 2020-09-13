@@ -19,6 +19,17 @@ class PetRepository extends ServiceEntityRepository
         parent::__construct($registry, Pet::class);
     }
 
+    public function get(string $id): Pet
+    {
+        $pet = $this->find($id);
+        if (!$pet) {
+            throw new \Exception(
+                sprintf('Owner with id: "%s" not found.', $id)
+            );
+        }
+        return $pet;
+    }
+
     public function persist(Pet $pet): void
     {
         $this->_em->persist($pet);
