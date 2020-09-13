@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h2>New Pet</h2>
+    <div class="container">
+        <h3>Owner: {{ owner.firstName }} {{ owner.lastName }}</h3>
+        <form method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" value="{{ pet.name }}" id="name" name="settings[name]">
+            </div>
+            <div class="form-group">
+                <label for="address">Birth Date</label>
+                <input type="date" class="form-control" id="address" value="{{ pet.birthDate|date("m:d:Y") }}" name="settings[birthDate]">
+            </div>
+            <div class="form-group">
+                <label for="type">Type</label>
+                <select class="form-control" id="type" name="settings[type]">
+                    {% for type in constant('App\\Entity\\Pet::AVAILABLE_TYPES') %}
+                    <option>{{ type|humanize }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <input type="hidden" name="submit" value="1">
+            <button type="submit" class="btn btn-primary">Update Pet</button>
+        </form>
+    </div>
+{% endblock %}

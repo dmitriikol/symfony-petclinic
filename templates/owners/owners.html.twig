@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <a href="{{ path('owners_add_owner') }}" class="btn btn-primary m-3">Add Owner</a>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Pets</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for owner in owners %}
+            <tr>
+                <td><a href="{{ path('owners_profile', {'id': owner.id}) }}">{{ owner.firstName }} {{ owner.lastName }}</a></td>
+                <td>{{ owner.address }}</td>
+                <td>{{ owner.city }}</td>
+                <td>{{ owner.phone }}</td>
+                <td>some pets</td>
+                <td><a href="{{ path('owners_delete', {'id': owner.id}) }}" class="btn-sm"
+                       onclick="return confirm('Вый действительно хотите удалить пользователя?')">Delete</a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -3,10 +3,64 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <style>
+
+            body {
+                background-color: #f1f1f1 !important;
+            }
+
+            .bg-navbar {
+                background-color: #fcda6f;
+            }
+
+            .logo-txt {
+                font-size: 200%;
+                font-family: sans-serif;
+                font-weight: 600;
+            }
+
+            .nav-link {
+                display: block;
+                padding: .5rem 1rem;
+                font-size: 200%;
+                font-weight: 500;
+                padding-left: 20px !important;
+                color: black;
+                font-family: sans-serif;
+            }
+
+            .nav-link:focus, .nav-link:hover {
+                color: brown;
+            }
+        </style>
         {% block stylesheets %}{% endblock %}
+        <!-- Bootstrap --->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- Bootstrap --->
     </head>
     <body>
+        <div class="navbar navbar-light bg-navbar">
+            <a class="navbar-brand" href="#">
+                <img src="/img/logo.JPG" width="85" height="70" class="d-inline-block align-top">
+                <span class="logo-txt">Petclinic</span>
+            </a>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('main') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('owners_list') }}">Owners</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Veterinarians</a>
+                </li>
+            </ul>
+        </div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+
+        <!-- VUE --->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- VUE --->
     </body>
 </html>
