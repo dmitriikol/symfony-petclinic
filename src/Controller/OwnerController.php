@@ -97,4 +97,37 @@ class OwnerController extends AbstractController
 
         return $this->redirectToRoute('owners_list');
     }
+
+    /**
+     * @Route("/update/{id}", name="owners_update")
+     * @param Request $request
+     * @param string $id
+     *
+     * @return Response
+     */
+    public function updateOwner(Request $request, string $id): Response
+    {
+
+        $owner = $this->ownerRepository->get($id);
+
+        if ($request->get('submit') == 1) {
+            $settings = $request->get('settings');
+
+            $owner->setFirstName($settings['first-name']);
+            $owner->setLastName($settings['last-name']);
+            $owner->setAddress($settings['address']);
+            $owner->setCity($settings['city']);
+            $owner->setPhone($settings['phone']);
+
+            $this->ownerRepository->update($owner);
+
+            $this->addFlash('success',"Owner update successfully.");
+
+            return $this->redirectToRoute('owners_list');
+        }
+
+        return $this->render('owners/update-owner.html.twig', [
+            'owner' => $owner
+        ]);
+    }
 }

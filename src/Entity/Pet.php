@@ -5,12 +5,15 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Ramsey\Uuid\Uuid;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PetRepository")
  */
 class Pet
 {
+
+    use CollectionToArrayConvertor;
 
     public const TYPE_DOG      = 'dog';
     public const TYPE_CAT      = 'cat';
@@ -48,13 +51,36 @@ class Pet
     private $type;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Owner::class, mappedBy="pets")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Owner", mappedBy="pets", cascade={"persist", "detach", "merge", "refresh"}, fetch="EXTRA_LAZY")
+     * @var Owner[]
      */
     private $owners;
 
-    public function __construct()
-    {
+    public function __construct(
+        $id,
+        $name,
+        $birthDate,
+        $type
+    ){
+        $this->id = $id;
+        $this->name = $name;
+        $this->birthDate = $birthDate;
+        $this->type = $type;
         $this->owners = new ArrayCollection();
+    }
+
+    public static function buildPet(
+        $name,
+        $birthDate,
+        $type
+    ): self
+    {
+        return new self(
+            Uuid::uuid4(),
+            $name,
+            $birthDate,
+            $type
+        );
     }
 
     public function getId(): int
@@ -93,11 +119,11 @@ class Pet
     }
 
     /**
-     * @return Collection|Owner[]
+     * @return Owner[]
      */
-    public function getOwners(): Collection
+    public function getOwners(): array
     {
-        return $this->owners;
+        return $this->toArrayProperty($this->owners);
     }
 
     public function addOwner(Owner $owner)

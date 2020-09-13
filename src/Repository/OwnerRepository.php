@@ -27,6 +27,7 @@ class OwnerRepository extends ServiceEntityRepository
                 sprintf('Owner with id: "%s" not found.', $id)
             );
         }
+        return $owner;
     }
 
     public function persist(Owner $owner): void

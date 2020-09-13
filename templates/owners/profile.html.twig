@@ -2,6 +2,52 @@
 
 {% block body %}
     <div class="container">
+        <h2>Owner information</h2>
+        <table class="table">
+            <tr>
+                <td>Name</td>
+                <td>{{ owner.firstName }} {{ owner.lastName }}</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>{{ owner.address }}</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>{{ owner.city }}</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>{{ owner.phone }}</td>
+            </tr>
+        </table>
+        <a href="{{ path('owners_update', {'id': owner.id}) }}" class="btn btn-primary">Edit Owner</a>
+        <a href="{{ path('pet_add', {'ownerId': owner.id}) }}" class="btn btn-primary">Add New Pet</a>
 
+        <hr>
+
+        <h2>Pets and Visits</h2>
+        {% for pet in owner.pets %}
+        <div class="row">
+            <div class="col-6">
+                <table class="table">
+                    <tr>
+                        <td>Name</td>
+                        <td>{{ pet.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Birth Date</td>
+                        <td>{{ pet.birthDate|date("m/d/Y") }}</td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td>{{ pet.type }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-6">gg</div>
+        </div>
+        <hr>
+        {% endfor %}
     </div>
 {% endblock %}

@@ -12,6 +12,9 @@ use Ramsey\Uuid\Uuid;
  */
 class Owner
 {
+
+    use CollectionToArrayConvertor;
+
     /**
      * @ORM\Id()
      * @ORM\Column(type="string")
@@ -19,7 +22,8 @@ class Owner
     private $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Pet::class, inversedBy="owners")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Pet", inversedBy="owners", fetch="EXTRA_LAZY", cascade={"all"})
+     * @var Pet[]
      */
     private $pets;
 
@@ -89,11 +93,11 @@ class Owner
     }
 
     /**
-     * @return Collection|Pet[]
+     * @return Pet[]
      */
-    public function getPets(): Collection
+    public function getPets(): array
     {
-        return $this->pets;
+        return $this->toArrayProperty($this->pets);
     }
 
     public function addPet(Pet $pet)

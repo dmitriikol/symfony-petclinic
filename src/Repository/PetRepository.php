@@ -19,6 +19,22 @@ class PetRepository extends ServiceEntityRepository
         parent::__construct($registry, Pet::class);
     }
 
+    public function persist(Pet $pet): void
+    {
+        $this->_em->persist($pet);
+    }
+
+    public function flush(): void
+    {
+        $this->_em->flush();
+    }
+
+    public function update(Pet $pet): void
+    {
+        $this->persist($pet);
+        $this->flush();
+    }
+
     // /**
     //  * @return Pet[] Returns an array of Pet objects
     //  */
