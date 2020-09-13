@@ -12,8 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a0bc2b71-fe20-4176-9707-f54d267e5b98" name="Default Changelist" comment="feat:&#10;* добавил контроллеры (Pet, Visit)&#10;* полная страница профиля Owner&#10;* создание Pet, Visit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Vet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Vet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/VetRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VetRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +144,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/veterinarians" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/DataFixtures" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -155,11 +153,11 @@
       <recent name="C:\projects\Petclinic\public\img" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\Petclinic\src\DataFixtures" />
       <recent name="C:\projects\Petclinic\templates\veterinarians" />
       <recent name="C:\projects\Petclinic\templates" />
       <recent name="C:\projects\Petclinic\templates\visits" />
       <recent name="C:\projects\Petclinic\templates\pets" />
-      <recent name="C:\projects\Petclinic\templates\owners" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -174,7 +172,7 @@
       <workItem from="1599030278601" duration="127000" />
       <workItem from="1599921828461" duration="17613000" />
       <workItem from="1599946170801" duration="4567000" />
-      <workItem from="1599999062517" duration="12763000" />
+      <workItem from="1599999062517" duration="13383000" />
     </task>
     <task id="LOCAL-00001" summary="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore">
       <created>1599937666064</created>
@@ -266,9 +264,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="347" y="73" width="598" height="534" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1599948029031" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600006111009">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600012032378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600006111009" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600012032378" />
   </component>
 </project>
