@@ -10,21 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0bc2b71-fe20-4176-9707-f54d267e5b98" name="Default Changelist" comment="feat:&#10;* owner controller&#10;* стандартный дизайн&#10;* небольшое изменение структуры бд">
+    <list default="true" id="a0bc2b71-fe20-4176-9707-f54d267e5b98" name="Default Changelist" comment="feat:&#10;* добавлено поле city в owner&#10;* добавил фикстуры для owner&#10;* Owner profile">
       <change beforePath="$PROJECT_DIR$/.docker/nginx/log/nginx-access.log" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/nginx/log/nginx-access.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Petclinic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Petclinic.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/OwnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OwnerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Owner.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Owner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/OwnerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/OwnerRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/owners/owners.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/owners/owners.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,17 +148,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../work/quiz-content" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/owners" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\projects\Petclinic\templates\owners" />
-      <recent name="C:\projects\Petclinic\public\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\projects\Petclinic\templates\owners" />
       <recent name="C:\projects\Petclinic\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\Petclinic\templates\owners" />
+      <recent name="C:\projects\Petclinic\public\img" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -181,7 +172,7 @@
       <workItem from="1598996272253" duration="628000" />
       <workItem from="1599030278601" duration="127000" />
       <workItem from="1599921828461" duration="17613000" />
-      <workItem from="1599946170801" duration="4228000" />
+      <workItem from="1599946170801" duration="4567000" />
     </task>
     <task id="LOCAL-00001" summary="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore">
       <created>1599937666064</created>
@@ -197,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599948359255</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat:&#10;* добавлено поле city в owner&#10;* добавил фикстуры для owner&#10;* Owner profile">
+      <created>1599950755269</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599950755269</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +216,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore" />
     <MESSAGE value="feat:&#10;* owner controller&#10;* стандартный дизайн&#10;* небольшое изменение структуры бд" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:&#10;* owner controller&#10;* стандартный дизайн&#10;* небольшое изменение структуры бд" />
+    <MESSAGE value="feat:&#10;* добавлено поле city в owner&#10;* добавил фикстуры для owner&#10;* Owner profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:&#10;* добавлено поле city в owner&#10;* добавил фикстуры для owner&#10;* Owner profile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599950151782">
