@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <a href="{{ path('vets_add') }}" class="btn btn-primary m-3">Add Vet</a>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Specialties</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for vet in vets %}
+            <tr>
+                <td>{{ vet.firstName }} {{ vet.lastName }}</td>
+                <td>{{ vet.Speciality }}</td>
+                <td><a href="{{ path('vets_delete', {'id': vet.id}) }}" class="btn-sm"
+                       onclick="return confirm('Вый действительно хотите удалить пользователя?')">Delete</a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

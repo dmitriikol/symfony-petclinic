@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h2>New Vet</h2>
+    <div class="container">
+        <form method="post">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" class="form-control" id="first-name" name="settings[first-name]">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" class="form-control" id="last-name"  name="settings[last-name]">
+            </div>
+            <div class="form-group">
+                <label for="type">Type</label>
+                <select class="form-control" id="type" name="settings[type]">
+                    {% for type in constant('App\\Entity\\Vet::AVAILABLE_SPECIALITIES') %}
+                        <option>{{ type|humanize }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <input type="hidden" name="submit" value="1">
+            <button type="submit" class="btn btn-primary">Add Owner</button>
+        </form>
+    </div>
+{% endblock %}

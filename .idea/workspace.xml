@@ -11,8 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0bc2b71-fe20-4176-9707-f54d267e5b98" name="Default Changelist" comment="feat:&#10;* добавил контроллеры (Pet, Visit)&#10;* полная страница профиля Owner&#10;* создание Pet, Visit">
-      <change beforePath="$PROJECT_DIR$/.docker/nginx/log/nginx-access.log" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/nginx/log/nginx-access.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Vet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Vet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/VetRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VetRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +146,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/veterinarians" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -154,11 +155,11 @@
       <recent name="C:\projects\Petclinic\public\img" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\Petclinic\templates\veterinarians" />
       <recent name="C:\projects\Petclinic\templates" />
       <recent name="C:\projects\Petclinic\templates\visits" />
       <recent name="C:\projects\Petclinic\templates\pets" />
       <recent name="C:\projects\Petclinic\templates\owners" />
-      <recent name="C:\projects\Petclinic\src\DataFixtures" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -173,7 +174,7 @@
       <workItem from="1599030278601" duration="127000" />
       <workItem from="1599921828461" duration="17613000" />
       <workItem from="1599946170801" duration="4567000" />
-      <workItem from="1599999062517" duration="10829000" />
+      <workItem from="1599999062517" duration="12763000" />
     </task>
     <task id="LOCAL-00001" summary="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore">
       <created>1599937666064</created>
@@ -237,10 +238,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="feat:&#10;* добавил контроллеры (Pet, Visit)&#10;* полная страница профиля Owner&#10;* создание Pet, Visit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600006031603">
+    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600011864892">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600006031603" />
+    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600011864892" />
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1599936402451">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -249,10 +250,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600009428572" />
-    <state x="446" y="64" key="NewPhpClassDialog" timestamp="1600004981708">
+    <state x="446" y="64" key="NewPhpClassDialog" timestamp="1600010726140">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1600004981708" />
+    <state x="446" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1600010726140" />
     <state x="477" y="264" key="NewPhpFileDialog" timestamp="1600003135311">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -19,6 +19,28 @@ class VetRepository extends ServiceEntityRepository
         parent::__construct($registry, Vet::class);
     }
 
+    public function persist(Vet $vet): void
+    {
+        $this->_em->persist($vet);
+    }
+
+    public function flush(): void
+    {
+        $this->_em->flush();
+    }
+
+    public function remove(Vet $vet): void
+    {
+        $this->_em->remove($vet);
+        $this->flush();
+    }
+
+    public function update(Vet $vet): void
+    {
+        $this->persist($vet);
+        $this->flush();
+    }
+
     // /**
     //  * @return Vet[] Returns an array of Vet objects
     //  */
