@@ -10,15 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0bc2b71-fe20-4176-9707-f54d267e5b98" name="Default Changelist" comment="feat:&#10;* добавлено поле city в owner&#10;* добавил фикстуры для owner&#10;* Owner profile">
+    <list default="true" id="a0bc2b71-fe20-4176-9707-f54d267e5b98" name="Default Changelist" comment="feat:&#10;* добавил контроллеры (Pet, Visit)&#10;* полная страница профиля Owner&#10;* создание Pet, Visit">
+      <change beforePath="$PROJECT_DIR$/.docker/nginx/log/nginx-access.log" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/nginx/log/nginx-access.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/OwnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OwnerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Owner.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Owner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Pet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/OwnerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/OwnerRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PetRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PetRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/owners/add-owner.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/owners/add-owner.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/owners/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/owners/profile.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +145,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/owners" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -160,11 +154,11 @@
       <recent name="C:\projects\Petclinic\public\img" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\projects\Petclinic\templates\owners" />
-      <recent name="C:\projects\Petclinic\templates\pets" />
-      <recent name="C:\projects\Petclinic\src\DataFixtures" />
-      <recent name="C:\projects\Petclinic\migrations" />
       <recent name="C:\projects\Petclinic\templates" />
+      <recent name="C:\projects\Petclinic\templates\visits" />
+      <recent name="C:\projects\Petclinic\templates\pets" />
+      <recent name="C:\projects\Petclinic\templates\owners" />
+      <recent name="C:\projects\Petclinic\src\DataFixtures" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -179,7 +173,7 @@
       <workItem from="1599030278601" duration="127000" />
       <workItem from="1599921828461" duration="17613000" />
       <workItem from="1599946170801" duration="4567000" />
-      <workItem from="1599999062517" duration="5481000" />
+      <workItem from="1599999062517" duration="10829000" />
     </task>
     <task id="LOCAL-00001" summary="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore">
       <created>1599937666064</created>
@@ -202,7 +196,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599950755269</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat:&#10;* добавлено поле city в owner&#10;* добавил фикстуры для owner&#10;* Owner profile, update&#10;* каскадные операции для ManyToMany">
+      <created>1600004870640</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600004870640</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat:&#10;* добавил контроллеры (Pet, Visit)&#10;* полная страница профиля Owner&#10;* создание Pet, Visit">
+      <created>1600009816953</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600009816953</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,25 +232,27 @@
     <MESSAGE value="feat:&#10;* add entity (vet, pet, owner, visit)&#10;* setup docker-compose (php-fpm, nginx, postgres)&#10;* update .gitignore" />
     <MESSAGE value="feat:&#10;* owner controller&#10;* стандартный дизайн&#10;* небольшое изменение структуры бд" />
     <MESSAGE value="feat:&#10;* добавлено поле city в owner&#10;* добавил фикстуры для owner&#10;* Owner profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:&#10;* добавлено поле city в owner&#10;* добавил фикстуры для owner&#10;* Owner profile" />
+    <MESSAGE value="feat:&#10;* добавлено поле city в owner&#10;* добавил фикстуры для owner&#10;* Owner profile, update&#10;* каскадные операции для ManyToMany" />
+    <MESSAGE value="feat:&#10;* добавил контроллеры (Pet, Visit)&#10;* полная страница профиля Owner&#10;* создание Pet, Visit" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:&#10;* добавил контроллеры (Pet, Visit)&#10;* полная страница профиля Owner&#10;* создание Pet, Visit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599950151782">
+    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600006031603">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1599950151782" />
+    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600006031603" />
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1599936402451">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1599936402451" />
-    <state x="421" y="98" key="FileChooserDialogImpl" timestamp="1600002822241">
+    <state x="421" y="98" key="FileChooserDialogImpl" timestamp="1600009428572">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600002822241" />
-    <state x="446" y="64" key="NewPhpClassDialog" timestamp="1599999997608">
+    <state x="421" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600009428572" />
+    <state x="446" y="64" key="NewPhpClassDialog" timestamp="1600004981708">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1599999997608" />
+    <state x="446" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1600004981708" />
     <state x="477" y="264" key="NewPhpFileDialog" timestamp="1600003135311">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -255,9 +265,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="347" y="73" width="598" height="534" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1599948029031" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600004547519">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600006111009">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600004547519" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600006111009" />
   </component>
 </project>
